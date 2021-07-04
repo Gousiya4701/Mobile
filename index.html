@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Website Design </title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo.jpg">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accesories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="camera.png">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, wide angle lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="processor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="display.png">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="battery.png">
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="controls">
+        <img src="arrow.png" id="upbtn">
+        <h3>features</h3>
+        <img src="arrow.png" id="downbtn">
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotatevalue = circle.style.transform;
+        var rotatesum;
+
+        upbtn.onclick = function(){
+            rotatesum = rotatevalue + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+        downbtn.onclick = function(){
+            rotatesum = rotatevalue + "rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+    </script>
+
+</body>
+</html>
